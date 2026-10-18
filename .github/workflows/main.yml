@@ -1,0 +1,19 @@
+name: myFirst-CI
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  examole-job:  
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: print welcome massage
+        run: echo "welcome to our first github action"
+
+      - name: check out
+        uses: actions/checkout@v7
+
+      - name: list repositry file
+        run: ls -la
